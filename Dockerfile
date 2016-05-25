@@ -68,7 +68,7 @@ RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
 RUN pip install nltk
 RUN pip install pyyaml
 RUN pip install pandas
-RUN pup install networkx
+RUN pip install networkx
 RUN pip sklearn
 
 # Install some dependencies.
