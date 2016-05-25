@@ -65,6 +65,12 @@ RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
     pip3 --no-cache-dir install requests[security] && \
     rm -rf /root/.cache
 
+RUN pip install nltk
+RUN pip install pyyaml
+RUN pip install pandas
+RUN pup install networkx
+RUN pip sklearn
+
 # Install some dependencies.
 RUN pip2 --no-cache-dir install ipykernel && \
     pip3 --no-cache-dir install ipykernel && \
@@ -106,7 +112,7 @@ RUN mkdir -p -m 700 /root/.jupyter/ && \
 VOLUME /notebooks
 WORKDIR /notebooks
 
-EXPOSE 8888
+EXPOSE 8080
 
 ENTRYPOINT ["tini", "--"]
 CMD ["jupyter", "notebook", "--no-browser"]
