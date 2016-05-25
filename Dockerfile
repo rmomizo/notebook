@@ -69,7 +69,7 @@ RUN pip install nltk
 RUN pip install pyyaml
 RUN pip install pandas
 RUN pip install networkx
-RUN pip sklearn
+RUN pip install -U scikit-learn
 
 # Install some dependencies.
 RUN pip2 --no-cache-dir install ipykernel && \
